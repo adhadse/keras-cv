@@ -220,6 +220,9 @@ class GridMask(layers.Layer):
             output = tf.squeeze(output, axis=0)
         return output
 
+    def augment_label(self, label, transformation=None):
+        return label
+
     def call(self, images, training=None):
         """call method for the GridMask layer.
 
